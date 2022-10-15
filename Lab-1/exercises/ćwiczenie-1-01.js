@@ -5,9 +5,8 @@
 let area = 1;
 let radius = '';
 /*
-    radius = area / Math.P
+    radius = (area / Math.PI).toFixed(2)
 */
-
 
 
 
