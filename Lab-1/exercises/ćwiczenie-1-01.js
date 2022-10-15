@@ -5,8 +5,13 @@
 let area = 1;
 let radius = '';
 /*
-    radius = (area / Math.PI).toFixed(2)
+    if(area>=0 && area !== NaN && area !== undefined){
+        radius = (area / Math.PI).toFixed(2)
+    }
 */
+if(area>=0 && area !== NaN){
+    radius = (area / Math.PI).toFixed(2)
+}
 
 
 

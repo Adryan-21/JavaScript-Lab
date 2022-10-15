@@ -37,5 +37,30 @@ let progressBar = ""
         }
     }
 */
+    if(n<=m){
+        const procent = Math.floor((n/m)*100)
+        progressBar+="|"
+        for (let index = 0; index < 50; index++) {
+            const p = Math.floor((index/50)*100)
+            if(procent>=p){
+                progressBar+="#"
+            }else{
+                progressBar+=" "
+            }
+            
+        }
+        progressBar+="|\n"
+        for (let index = 0; index <= 50; index++) {
+            if(index === 0){
+                progressBar+="0 %"
+            }else if(index === 25){
+                progressBar+=`${procent} %`
+            }else if(index === 43){
+                progressBar+=  "100%"
+            }else{
+                progressBar+=" "
+            }
+        }
+    }
 
 console.log(progressBar)

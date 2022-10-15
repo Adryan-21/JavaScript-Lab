@@ -17,19 +17,36 @@ let rectHeight = 5;
 let rectBorderSymbol = '#';
 let rectString = '';
 /*
+if(rectWidth >= 0 && rectWidth!== NaN && rectHeight >= 0 && rectHeight !== NaN){
+
     for (let index = 0; index < rectHeight; index++) {
         for (let j = 0; j < rectWidth; j++) {
             if(index === 0 | index === rectHeight-1){
                 rectString+= rectBorderSymbol
             }else if(j===0 || j=== rectWidth-1){
-                rectString+= rectBorderSymbol
+            rectString+= rectBorderSymbol
             }else{
                 rectString+=" "
             }
-            
         }
         rectString+="\n"
     }
+}
 */
+if(rectWidth >= 0 && rectWidth!== NaN && rectHeight >= 0 && rectHeight !== NaN){
+
+    for (let index = 0; index < rectHeight; index++) {
+        for (let j = 0; j < rectWidth; j++) {
+            if(index === 0 | index === rectHeight-1){
+                rectString+= rectBorderSymbol
+            }else if(j===0 || j=== rectWidth-1){
+            rectString+= rectBorderSymbol
+            }else{
+                rectString+=" "
+            }
+        }
+        rectString+="\n"
+    }
+}
 
 console.log(rectString);

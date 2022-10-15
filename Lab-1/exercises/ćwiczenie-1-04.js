@@ -14,10 +14,28 @@ let randomString = '';
         const randomNumber = Math.floor(Math.random() * randoms.length)
         return randoms[randomNumber]
     } // funkcja generujaca losowe wartości z tablicy randoms
+    if(length>=0 && length !== NaN){
+        for (let index = 0; index < length; index++) {
+            randomString+=getRandom()
+        }
+    }
+
+*/
+
+const alpha = Array.from(Array(26)).map((e, i) => i + 97) //generacja 26 liczb i zwiększenie ich wartości o 97
+const alphabet = alpha.map((x) => String.fromCharCode(x)) // zmiana liczb z tablicy alpha na litery a-z
+const numbers = Array.from(Array(9).keys()) //generacja cyft
+const randoms = [...numbers,...alphabet] // połączenie 2 tablic w 1 za pomoca operatora (...)
+function getRandom(){
+    const randomNumber = Math.floor(Math.random() * randoms.length)
+    return randoms[randomNumber]
+} // funkcja generujaca losowe wartości z tablicy randoms
+if(length>=0 && length !== NaN){
     for (let index = 0; index < length; index++) {
         randomString+=getRandom()
     }
-*/
+}
+ 
 
 
 

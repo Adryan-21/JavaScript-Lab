@@ -11,12 +11,23 @@
 let height = 5;
 let triangle = '';
 /*
+    if(height>0 && height !== NaN){
+        for (let index = 0; index < height; index++) {
+            for (let j = 0; j <= index; j++) {
+                triangle+="#"
+            }
+            triangle+="\n"
+        }
+    }
+*/
+if(height>0 && height !== NaN){
     for (let index = 0; index < height; index++) {
         for (let j = 0; j <= index; j++) {
             triangle+="#"
         }
         triangle+="\n"
     }
-*/
+}
+
 
 console.log(triangle);
