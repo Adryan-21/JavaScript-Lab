@@ -10,6 +10,15 @@
  */
 
 function union(a1, a2){
+    let setA1 = new Set(a1)
+    let setA2 = new Set(a2)
+    let result = new Set()
+    setA1.forEach(element => {
+        if(setA2.has(element)){
+            result.add(element)
+        }
+    });
+    return result
 }
 
 const a1 = [...Array(100_000).keys()];

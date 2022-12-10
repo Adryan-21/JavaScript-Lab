@@ -7,7 +7,15 @@
  * Map(5) {size: 5, a => 2, b => 1, c => 3, d => 1, g => 1}
  */
 function frequences(str){
-
+    let map = new Map()
+    str.split("").forEach(element => {
+        if(map.has(element)){
+            map.set(element, map.get(element) + 1)
+        }else{
+            map.set(element, 1)
+        }
+    });
+    return map
 }
 
 try{
